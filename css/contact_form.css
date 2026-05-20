@@ -1,0 +1,175 @@
+/* =========================================
+   CONTACT FORM - COMPETITIVE 2026 DESIGN
+   ========================================= */
+
+.form-section {
+    padding: 60px 0 100px 0;
+    background-color: #fcfcfc; /* Warna background abu sangat terang */
+}
+
+.form-page-container {
+    max-width: 900px !important;
+}
+
+/* Back Button */
+.back-navigation {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: rgba(5, 154, 135, 0.05);
+    border: 1px solid rgba(5, 154, 135, 0.1);
+    transition: all 0.4s var(--bezier);
+}
+
+.btn-back:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateX(-5px);
+    box-shadow: 0 10px 20px rgba(5, 154, 135, 0.15);
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    background: var(--white);
+    padding: 50px 60px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0f0f0;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: var(--text-gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.logo-img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
+/* Input Group Styling */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-left: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    color: var(--text-dark);
+    background-color: #f9fafb;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus State */
+.input-group input:focus,
+.input-group textarea:focus {
+    background-color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(5, 154, 135, 0.1);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button 2026 */
+.btn-submit {
+    margin-top: 10px;
+    padding: 18px 30px;
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.4s var(--bezier);
+}
+
+.btn-submit i {
+    font-size: 22px;
+}
+
+/* Hover State saat aktif */
+.btn-submit:not(:disabled):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(5, 154, 135, 0.3);
+    background: #048272;
+}
+
+/* Disabled State (Saat form kosong) */
+.btn-submit:disabled {
+    background: #d1d5db; /* Warna abu-abu mati */
+    color: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive Form */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}

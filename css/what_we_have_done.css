@@ -1,0 +1,136 @@
+/* Styling khusus halaman history */
+
+/* Setup efek scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.3s; }
+
+.history-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.logo-img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.main-title {
+    font-family: var(--font-poppins);
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 700;
+    color: var(--purple-dark);
+    margin-bottom: 60px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    row-gap: 50px;
+    align-items: start;
+}
+
+/* Kotak tahun dengan efek angkat saat di-hover */
+.history-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.history-card:hover {
+    transform: translateY(-8px);
+    background: rgba(5, 154, 135, 0.02);
+    border-color: rgba(5, 154, 135, 0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.05); /* Garis batas tipis di bawah tahun */
+    padding-bottom: 15px;
+}
+
+/* Ikon ikut bereaksi pas kotak di-hover */
+.icon-yellow {
+    color: var(--secondary);
+    font-size: 36px;
+    transition: transform 0.4s ease;
+}
+
+.history-card:hover .icon-yellow {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.year {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.list-content {
+    list-style: none;
+    padding: 0;
+}
+
+.list-content li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* Titik list custom */
+.list-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary); /* Titik disamakan dengan warna utama */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Tampilan buat HP & Tablet */
+@media (max-width: 992px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .main-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .year {
+        font-size: 28px;
+    }
+    .icon-yellow {
+        font-size: 30px;
+    }
+    .history-card {
+        padding: 15px;
+    }
+}

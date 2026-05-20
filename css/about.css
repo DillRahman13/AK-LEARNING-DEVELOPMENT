@@ -1,0 +1,418 @@
+/* =========================================
+   PENGATURAN NAVBAR & HAMBURGER MENU
+   ========================================= */
+.nav-actions {
+    display: flex;
+    flex-direction: row; /* Memaksa elemen berjejer ke samping */
+    align-items: center; /* Memastikan keduanya rata tengah secara vertikal */
+    gap: 15px; /* Jarak antara tombol Catalog dan Hamburger */
+}
+
+/* Sembunyikan tombol hamburger di layar PC */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 32px; 
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   ANIMASI & HERO SECTION
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+
+@keyframes floatElement {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.about-hero {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-text {
+    flex: 1.2;
+}
+
+.about-text h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.logo-img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.btn-outline-teal {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.btn-outline-teal::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0%; height: 100%;
+    background-color: var(--primary);
+    transition: width 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: -1;
+}
+
+.btn-outline-teal:hover::before {
+    width: 100%;
+}
+
+.btn-outline-teal:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(5, 154, 135, 0.2);
+}
+
+.stats-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.stat-desc {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray);
+    margin-top: 5px;
+}
+
+.about-images {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1), box-shadow 0.5s ease;
+}
+
+.img-wrapper:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.main-img {
+    width: 80%;
+    z-index: 1;
+}
+
+.sub-img {
+    width: 60%;
+    position: absolute;
+    left: -10%;
+    top: 15%;
+    z-index: 2;
+    border: 8px solid var(--white);
+    animation: floatElement 6s ease-in-out infinite; 
+}
+
+.about-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* =========================================
+   VISI & MISI SECTION
+   ========================================= */
+.vision-mission {
+    padding: 100px 0;
+    background-color: #fcfcfc;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 100px;
+}
+
+.visi-box, .misi-box {
+    transition: transform 0.4s ease;
+}
+
+.visi-box:hover, .misi-box:hover {
+    transform: translateY(-3px);
+}
+
+.visi-box h3, 
+.misi-box h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary); 
+}
+
+.visi-text {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--primary); 
+}
+
+.misi-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.misi-list li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.misi-list li:hover {
+    background: var(--white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    transform: translateX(10px);
+}
+
+.misi-list i {
+    color: var(--primary);
+    font-size: 20px;
+    margin-top: 3px;
+    transition: transform 0.3s ease;
+}
+
+.misi-list li:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.misi-list p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--text-dark);
+    text-align: justify;
+}
+
+.text-yellow { color: var(--secondary) !important; }
+.text-teal { color: var(--primary) !important; }
+
+/* =========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================= */
+
+/* --- Tablet --- */
+@media (max-width: 992px) {
+    .about-flex, .vm-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .about-images {
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    .sub-img {
+        left: 0;
+        animation: none; 
+    }
+    
+    .misi-list li:hover {
+        transform: none; 
+    }
+}
+
+/* --- Pengaturan Khusus Mobile (HP) --- */
+@media (max-width: 768px) {
+    
+    /* Navbar Mobile (Hamburger & Nav Dropdown) */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-catalog {
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Bisa diganti var(--white) jika ada */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        transform: translateY(-150%);
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+        display: flex;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 999;
+    }
+
+    /* Hero Section Mobile */
+    .about-hero {
+        padding: 50px 0;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: center;
+    }
+
+    /* Posisikan tombol di tengah */
+    .btn-outline-teal {
+        display: flex;
+        justify-content: center;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    /* Angka stat berjejer rapi atau turun ke bawah */
+    .stats-container {
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* Bikin gambar sejajar ke bawah (Stacked) */
+    .about-images {
+        display: flex;
+        flex-direction: column; /* Mengubah arah menjadi ke bawah */
+        align-items: center;
+        gap: 20px; /* Jarak antar gambar */
+        margin-top: 40px;
+    }
+
+    .main-img, .sub-img {
+        width: 100%; /* Lebar penuh */
+        position: relative; /* Menghilangkan posisi menumpuk absolute */
+        top: 0;
+        left: 0;
+    }
+
+    .sub-img {
+        border: none; /* Hilangkan garis putih agar lebih rapi saat dijejer ke bawah */
+    }
+
+    /* Visi Misi Mobile */
+    .vision-mission {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .visi-box, .misi-box {
+        text-align: center;
+    }
+
+    .visi-text {
+        font-size: 18px;
+    }
+    
+    .misi-list p {
+        text-align: left; /* Teks misi tetap rata kiri agar mudah dibaca */
+    }
+}

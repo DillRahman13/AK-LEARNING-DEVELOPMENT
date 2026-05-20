@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Ebook | AK Learning</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/download.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
+        </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index1.html">About</a>
+                <a href="index2.html">Approach</a>
+                <a href="index3.html">What We Do</a>
+                <a href="index4.html">What We Have Done</a>
+                <a href="index6.html" class="active">Download </a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="index5.html" class="btn-catalog">
+                    <i class="ri-book-read-line"></i> Catalog
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="download-section">
+        <div class="container">
+           <div class="section-header">
+                <h1>EBOOK CENTER</h1>
+                <p>Akses koleksi Ebook eksklusif kami yang dirancang khusus untuk mendukung pertumbuhan profesional Anda. 
+                    Temukan berbagai panduan praktis, wawasan mendalam, dan strategi kepemimpinan yang dapat langsung diterapkan. 
+                    Semua materi ini kami sediakan untuk membantu Anda mengembangkan potensi, memperluas wawasan, dan mengambil<br> langkah nyata menuju puncak karier.</p>
+            </div>
+
+            <div class="download-grid">
+                <div class="ebook-card">
+                    <div class="ebook-preview">
+                        <img src="img/ebook1.webp" alt="Preview Ebook">
+                        <div class="badge">Terbaru</div>
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Kerjaanya cuma nyari orang? Coba sini duduk dulu!</h3>
+                        <p>Kisah nyata hrd yang diam tapi hampir meledak
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                        <div class="ebook-actions">
+                            <button class="btn-preview" onclick="openPreview('pdf/Kerjaannya Cuma Nyari Orang Coba Sini Duduk Dulu-AK-EBook (2).pdf')">
+                                <i class="ri-eye-line"></i> Preview
+                            </button>
+                            <a href="pdf/Kerjaannya Cuma Nyari Orang Coba Sini Duduk Dulu-AK-EBook (2).pdf" download class="btn-download-action">
+                                <i class="ri-download-2-line"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ebook-card">
+                    <div class="ebook-preview">
+                        <img src="img/ebook2.webp" alt="Preview Ebook">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Mau nya Training, Dapatnya Drama</h3>
+                        <p>Panduan (Nggak Serius - Serius Amat) Menyelami Dunia Traning 
+                            Perusahaan yang Kadang Melelahkan, Kadang Menggelikan
+                        </p>
+                        <div class="ebook-actions">
+                            <button class="btn-preview" onclick="openPreview('pdf/Maunya Training, Dapatnya Drama-AK-EBook (1).pdf')">
+                                <i class="ri-eye-line"></i> Preview
+                            </button>
+                            <a href="pdf/Maunya Training, Dapatnya Drama-AK-EBook (1).pdf" download class="btn-download-action">
+                                <i class="ri-download-2-line"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ebook-card">
+                    <div class="ebook-preview">
+                        <img src="img/ebook3.webp" alt="Preview Ebook">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>HR <br> Hitung Rasa, Kerja Tak Terasa</h3>
+                        <p>Ketika Kopi Dingin Menjadi Benefit Para Pegiat Lembur Tanggal 25
+                            <br>
+                            <br>
+                        </p>
+                        <div class="ebook-actions">
+                            <button class="btn-preview" onclick="openPreview('pdf/HR Hitung Rasa, Kerja Tak Terasa-AK-EBook (1).pdf')">
+                                <i class="ri-eye-line"></i> Preview
+                            </button>
+                            <a href="pdf/HR Hitung Rasa, Kerja Tak Terasa-AK-EBook (1).pdf" download class="btn-download-action">
+                                <i class="ri-download-2-line"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ebook-card">
+                    <div class="ebook-preview">
+                        <img src="img/training-catalog.webp" alt="Preview Ebook">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Training Catalog</h3>
+                        <p>Daftar katalog program AK Learning
+                            <br>
+                            <br>
+                        </p>
+                        <div class="ebook-actions">
+                            <button class="btn-preview" onclick="openPreview('pdf/Training Catalog-AK Learning Development (1).pdf')">
+                                <i class="ri-eye-line"></i> Preview
+                            </button>
+                            <a href="pdf/Training Catalog-AK Learning Development (1).pdf" download class="btn-download-action">
+                                <i class="ri-download-2-line"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="ebook-card">
+                    <div class="ebook-preview">
+                        <img src="img/company-profile.webp" alt="Preview Ebook">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Company Profile</h3>
+                        <p>Company Profile AK Learning
+                            <br>
+                            <br>
+                        </p>
+                        <div class="ebook-actions">
+                            <button class="btn-preview" onclick="openPreview('pdf/Company Profile-AK Learning Development (1).pdf')">
+                                <i class="ri-eye-line"></i> Preview
+                            </button>
+                            <a href="pdf/Company Profile-AK Learning Development (1).pdf" download class="btn-download-action">
+                                <i class="ri-download-2-line"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PDF Preview</h3>
+                <span class="close" onclick="closePreview()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="download.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if(menuToggle && navLinks) {
+                const icon = menuToggle.querySelector('i');
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.replace('ri-menu-line', 'ri-close-line');
+                    } else {
+                        icon.classList.replace('ri-close-line', 'ri-menu-line');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

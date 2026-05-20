@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Learning | Official Website</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
+        </a>
+            
+        
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="index1.html">About</a>
+                <a href="index2.html">Approach</a>
+                <a href="index3.html">What We Do</a>
+                <a href="index4.html">What We Have Done</a>
+                <a href="index6.html">Download</a>
+                <a href="index7.html">Gallery</a>
+
+            </nav>
+
+            
+            <div class="nav-actions">
+                <a href="index5.html" class="btn-catalog">
+                    <i class="ri-book-read-line"></i> Catalog
+                </a>
+                
+              
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>AK LEARNING DEVELOPMENT</h1>
+                <p>"Kami percaya bahwa setiap individu memiliki potensi luar biasa untuk berkembang. Seperti kisah cinta yang tumbuh dari perhatian dan kepercayaan, kami hadir untuk membimbing, menginspirasi, dan menyalakan cahaya dalam perjalananmu menuju sukses. Bersama, kita tidak hanya belajar—kita bertumbuh, memimpin, dan menciptakan masa depan yang lebih gemilang."</p>
+                <a href="index1.html" class="btn-primary">Tentang Kami</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const icon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            
+            
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('ri-menu-line');
+                icon.classList.add('ri-close-line');
+            } else {
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            }
+        });
+    </script>
+</body>
+</html>

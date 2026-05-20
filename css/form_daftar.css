@@ -1,0 +1,215 @@
+/* =========================================
+   FORM PENDAFTARAN - COMPETITIVE 2026
+   ========================================= */
+
+.form-section {
+    padding: 50px 0 100px 0;
+    background-color: #fcfcfc;
+}
+
+.form-page-container {
+    max-width: 850px !important;
+}
+
+/* Tombol Back */
+.back-navigation {
+    margin-bottom: 25px;
+    display: flex;
+}
+
+
+.logo-img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: rgba(5, 154, 135, 0.05);
+    border: 1px solid rgba(5, 154, 135, 0.1);
+    transition: all 0.4s var(--bezier);
+}
+
+.btn-back:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateX(-5px);
+    box-shadow: 0 10px 20px rgba(5, 154, 135, 0.15);
+}
+
+/* Wrapper Form */
+.form-wrapper {
+    background: var(--white);
+    padding: 50px 55px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f2f2f2;
+}
+
+.logo-img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.form-header p {
+    color: var(--text-gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Form Layout */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Label & Indikator Text */
+.input-group label {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-left: 4px;
+}
+
+.required {
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+.optional-text {
+    color: #999;
+    font-weight: 400;
+    font-size: 12.5px;
+    margin-left: 4px;
+}
+
+/* Input Fields */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    color: var(--text-dark);
+    background-color: #f8fafc; /* Abu kebiruan sangat muda */
+    border: 2px solid transparent;
+    border-radius: 14px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    background-color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(5, 154, 135, 0.1);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Readonly Input Styling (KOMPETITIF 2026) */
+.readonly-input {
+    background-color: rgba(5, 154, 135, 0.04) !important;
+    border: 1px solid rgba(5, 154, 135, 0.2) !important;
+    color: var(--primary) !important;
+    font-weight: 600;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.readonly-input:focus {
+    box-shadow: none !important; /* Hilangkan efek fokus */
+}
+
+/* Tombol Submit */
+.btn-submit {
+    margin-top: 15px;
+    padding: 18px 30px;
+    font-family: var(--font-poppins);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s var(--bezier);
+}
+
+.btn-submit i {
+    font-size: 22px;
+}
+
+/* Hover State saat tombol aktif */
+.btn-submit:not(:disabled):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(5, 154, 135, 0.35);
+    background: #048272; /* Teal lebih gelap sedikit */
+}
+
+.btn-submit:not(:disabled):active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* State Mati (Disabled) */
+.btn-submit:disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 40px 25px;
+    }
+    
+    .input-row {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+        gap: 20px;
+    }
+}

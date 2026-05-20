@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Program - AK Learning</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/approach.css">
+    <link rel="stylesheet" href="css/form_daftar.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
+        </a>
+        
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index1.html">About</a>
+                <a href="index2.html">Approach</a>
+                <a href="index3.html">What We Do</a>
+                <a href="index4.html">What We Have Done</a>
+            </div>
+            <a href="index5.html" class="btn-catalog">
+                <i class="ri-book-read-fill"></i> Catalog
+            </a>
+        </div>
+    </nav>
+
+    <!-- FORM SECTION -->
+    <main class="form-section">
+        <div class="container form-page-container">
+            
+            <!-- Tombol Kembali -->
+            <div class="back-navigation">
+                <a href="index5.html" class="btn-back">
+                    <i class="ri-arrow-left-line"></i>
+                    <span>Kembali ke Katalog</span>
+                </a>
+            </div>
+
+            <!-- Form Wrapper -->
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Form Pendaftaran <span class="text-yellow">Program</span></h2>
+                    <p>Lengkapi data diri Anda di bawah ini untuk mendaftar. Data akan diteruskan langsung ke WhatsApp konsultan kami.</p>
+                </div>
+
+                <form id="waForm" class="modern-form">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="instansi">Instansi / Perusahaan <span class="required">*</span></label>
+                            <input type="text" id="instansi" placeholder="Nama instansi/perusahaan" required>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="nohp">Nomor HP / WhatsApp <span class="required">*</span></label>
+                            <input type="tel" id="nohp" placeholder="Contoh: 08123456789" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Alamat Email <span class="required">*</span></label>
+                            <input type="email" id="email" placeholder="email@perusahaan.com" required>
+                        </div>
+                    </div>
+
+                    <!-- FIELD PROGRAM (READONLY & AUTOFILL) -->
+                    <div class="input-group">
+                        <label for="program">Program yang Didaftarkan</label>
+                        <!-- Atribut readonly membuat field tidak bisa diedit -->
+                        <input type="text" id="program" class="readonly-input" readonly>
+                    </div>
+
+                    <!-- PESAN (OPTIONAL) -->
+                    <div class="input-group">
+                        <label for="pesan">Pesan Tambahan <span class="optional-text">(Opsional)</span></label>
+                        <textarea id="pesan" rows="3" placeholder="Sampaikan pesan, request khusus, atau pertanyaan terkait pendaftaran ini..."></textarea>
+                    </div>
+
+                    <button type="button" id="btnSubmit" class="btn-submit" disabled>
+                        <i class="ri-whatsapp-line"></i> Kirim Pendaftaran via WA
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>AK LEARNING DEVELOPMENT</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Approach</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">Catalog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col border-left">
+                <h4>Kontak & Konsultasi</h4>
+                <ul class="footer-contact">
+                    <li>Cilegon, Indonesia</li>
+                    <li><i class="ri-whatsapp-line"></i> 0818 0424 0776</li>
+                    <li>Aklearning@gmail.com</li>
+                    <li>Konsultasi via whatsapp</li>
+                </ul>
+            </div>
+            <div class="footer-col border-left">
+                <p class="focus-title">Focus Areas:</p>
+                <ul class="footer-links">
+                    <li>Leadership Development</li>
+                    <li>Human Resources</li>
+                    <li>Corporate Culture & Productivity</li>
+                </ul>
+            </div>
+            <div class="footer-col border-left">
+                <h3>AK LEARNING DEVELOPMENT</h3>
+                <p class="slogan">Pemimpin tidak dilahirkan mereka dibentuk oleh sistem</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // ==========================================
+            // 1. LOGIKA AUTOFILL PROGRAM (DARI URL)
+            // ==========================================
+            let programName = "";
+            
+            // Mengambil URL dari halaman sebelumnya (referensi)
+            if (document.referrer) {
+                const url = new URL(document.referrer);
+                let pathname = url.pathname;
+                
+                // Ambil nama file saja (misal: /learning_design.html -> learning_design.html)
+                let filename = pathname.substring(pathname.lastIndexOf('/') + 1);
+                
+                // Jika nama file tidak kosong
+                if (filename && filename !== "" && filename !== "/") {
+                    // Hapus ekstensi .html
+                    filename = filename.replace('.html', '');
+                    
+                    // Ganti underscore (_) atau dash (-) menjadi spasi
+                    filename = filename.replace(/[_-]/g, ' ');
+                    
+                    // Buat huruf pertama setiap kata menjadi kapital (Title Case)
+                    programName = filename.replace(/\b\w/g, char => char.toUpperCase());
+                }
+            }
+
+            const programInput = document.getElementById('program');
+            
+            if (programName) {
+                programInput.value = programName;
+            } else {
+                programInput.value = "Katalog Program Utama"; // Fallback jika dibuka langsung tanpa rujukan
+            }
+
+            // ==========================================
+            // 2. LOGIKA VALIDASI (MENGABAIKAN PESAN)
+            // ==========================================
+            // Hanya mengambil input yang memiliki atribut "required"
+            const requiredInputs = document.querySelectorAll('#waForm input[required]');
+            const btnSubmit = document.getElementById('btnSubmit');
+
+            function checkFormValidity() {
+                let isValid = true;
+                requiredInputs.forEach(input => {
+                    if (input.value.trim() === '') {
+                        isValid = false;
+                    }
+                });
+                // Tombol menyala jika valid
+                btnSubmit.disabled = !isValid;
+            }
+
+            // Pantau setiap ketikan di field yang wajib diisi
+            requiredInputs.forEach(input => {
+                input.addEventListener('input', checkFormValidity);
+            });
+
+            // ==========================================
+            // 3. LOGIKA PENGIRIMAN WA
+            // ==========================================
+            btnSubmit.addEventListener('click', function() {
+                const nama = document.getElementById('nama').value.trim();
+                const instansi = document.getElementById('instansi').value.trim();
+                const nohp = document.getElementById('nohp').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const program = document.getElementById('program').value.trim();
+                const pesan = document.getElementById('pesan').value.trim() || "-"; // Jika kosong, isi strip
+
+                // Format Pesan untuk WA (menggunakan %0A untuk enter)
+                const textWA = `Halo Konsultan AK Learning, saya ingin mendaftar program training berikut.%0A%0A*Data Pendaftaran:*%0AProgram: *${program}*%0ANama Lengkap: ${nama}%0AInstansi/Perusahaan: ${instansi}%0ANo. HP/WA: ${nohp}%0AEmail: ${email}%0A%0A*Pesan Tambahan:*%0A${pesan}`;
+
+                // Nomor tujuan WA
+                const nomorWA = "6281804240776";
+                
+                // Buka link WhatsApp di tab baru
+                window.open(`https://wa.me/${nomorWA}?text=${textWA}`, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
