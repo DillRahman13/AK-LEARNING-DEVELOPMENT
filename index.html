@@ -3,26 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AK Learning | Official Website</title>
     
+    <!-- Meta title & deskripsi -->
+    <title>AK Learning | Lembaga Pelatihan & Pengembangan SDM Profesional</title>
+    <meta name="description" content="AK Learning Development adalah partner pelatihan terpercaya untuk pengembangan SDM, leadership, dan manajemen. Tingkatkan potensi tim Anda bersama kami.">
+    <meta name="keywords" content="pelatihan sdm, training leadership, konsultan hr, ak learning, pengembangan kompetensi">
+    
+    <!-- Canonical tag -->
+    <link rel="canonical" href="https://www.aklearningdevelopment.com/" />
+
+    <!-- Open Graph Whatsapp -->
+    <meta property="og:title" content="AK Learning | Pelatihan & Pengembangan SDM">
+    <meta property="og:description" content="Kembangkan potensi luar biasa dalam tim Anda. Kami hadir untuk membimbing dan menginspirasi perjalanan menuju sukses.">
+    <meta property="og:image" content="https://www.aklearningdevelopment.com/img/logo.webp">
+    <meta property="og:url" content="https://www.aklearningdevelopment.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Optimasi Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    
     <link rel="stylesheet" href="css/homepage.css">
+
+    <!-- Schema Markup Bot Gugel -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AK Learning Development",
+      "url": "https://www.aklearningdevelopment.com",
+      "logo": "https://www.aklearningdevelopment.com/img/logo.webp",
+      "description": "Lembaga pelatihan dan pengembangan Sumber Daya Manusia (SDM) profesional.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
 </head>
 <body>
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
-        </a>
+            <a href="index.html" class="logo" aria-label="Beranda AK Learning">
+                
+                <img src="img/logo.webp" alt="Logo Resmi AK Learning Development" class="logo-img" width="150" height="50">
+            </a>
             
-        
-            <nav class="nav-links" id="navLinks">
+            <nav class="nav-links" id="navLinks" aria-label="Navigasi Utama">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="approach.html">Approach</a>
@@ -30,51 +62,36 @@
                 <a href="what_we_have_done.html">What We Have Done</a>
                 <a href="download.html">Download</a>
                 <a href="gallery.html">Gallery</a>
-
             </nav>
 
-            
             <div class="nav-actions">
-                <a href="catalog.html" class="btn-catalog">
-                    <i class="ri-book-read-line"></i> Catalog
+                <a href="catalog.html" class="btn-catalog" aria-label="Lihat Katalog Pelatihan">
+                    <i class="ri-book-read-line" aria-hidden="true"></i> Catalog
                 </a>
                 
-              
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="ri-menu-line"></i>
+                <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+ <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>AK LEARNING DEVELOPMENT</h1>
+               
+                <h1>
+                    <span class="brand-name">AK LEARNING DEVELOPMENT</span>
+                    <span class="seo-tagline">Partner Pelatihan SDM Anda</span>
+                </h1>
                 <p>"Kami percaya bahwa setiap individu memiliki potensi luar biasa untuk berkembang. Seperti kisah cinta yang tumbuh dari perhatian dan kepercayaan, kami hadir untuk membimbing, menginspirasi, dan menyalakan cahaya dalam perjalananmu menuju sukses. Bersama, kita tidak hanya belajar—kita bertumbuh, memimpin, dan menciptakan masa depan yang lebih gemilang."</p>
                 <a href="about.html" class="btn-primary">Tentang Kami</a>
             </div>
         </div>
     </section>
 
-   
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const icon = menuToggle.querySelector('i');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('ri-menu-line');
-                icon.classList.add('ri-close-line');
-            } else {
-                icon.classList.remove('ri-close-line');
-                icon.classList.add('ri-menu-line');
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
+    
+    
 </body>
 </html>

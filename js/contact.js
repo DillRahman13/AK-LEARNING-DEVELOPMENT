@@ -36,4 +36,25 @@ btnSubmit.addEventListener('click', function() {
     
     const waLink = `https://wa.me/${nomorWA}?text=${pesan}`;
     window.open(waLink, '_blank');
+
+    
 });
+
+ document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if(menuToggle && navLinks) {
+                const icon = menuToggle.querySelector('i');
+                menuToggle.addEventListener('click', () => {
+                    const isActive = navLinks.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', isActive);
+                    
+                    if (isActive) {
+                        icon.classList.replace('ri-menu-line', 'ri-close-line');
+                    } else {
+                        icon.classList.replace('ri-close-line', 'ri-menu-line');
+                    }
+                });
+            }
+        });

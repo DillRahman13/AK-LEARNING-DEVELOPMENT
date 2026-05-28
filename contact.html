@@ -3,34 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami - AK Learning</title>
     
+   
+    <title>Hubungi Kami | Konsultasi Pelatihan SDM - AK Learning</title>
+    <meta name="description" content="Hubungi konsultan AK Learning Development untuk mendiskusikan kebutuhan In-House Training, People Development, dan konsultasi HR di perusahaan Anda.">
+    <meta name="keywords" content="hubungi ak learning, kontak konsultan sdm, pendaftaran training hr, konsultasi hrd, layanan pelanggan ak learning">
+    
+    >
+    <link rel="canonical" href="https://www.aklearningdevelopment.com/contact.html" />
+    <meta property="og:title" content="Hubungi Konsultan AK Learning">
+    <meta property="og:description" content="Tingkatkan performa tim Anda. Hubungi kami untuk konsultasi program pelatihan yang tepat sasaran.">
+    <meta property="og:url" content="https://www.aklearningdevelopment.com/contact.html">
+    <meta property="og:type" content="website">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/approach.css">
     <link rel="stylesheet" href="css/contact_form.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Hubungi AK Learning Development",
+      "description": "Halaman kontak resmi untuk pendaftaran dan konsultasi program pelatihan.",
+      "url": "https://www.aklearningdevelopment.com/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "AK Learning Development",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+62-818-0424-0776",
+          "contactType": "Customer Service",
+          "email": "aditya.iyax@gmail.com",
+          "contactOption": "HearingImpairedSupported",
+          "availableLanguage": "Indonesian"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
 
+    
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
-        </a>
-        
-            <div class="nav-links">
+            <a href="index.html" class="logo" aria-label="Beranda AK Learning">
+                <img src="img/logo.webp" alt="Logo AK Learning" class="logo-img" width="150" height="50">
+            </a>
+            
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Navigasi Utama">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="approach.html">Approach</a>
                 <a href="what_we_do.html">What We Do</a>
                 <a href="what_we_have_done.html">What We Have Done</a>
                 <a href="download.html">Download</a>
-
+                <a href="gallery.html">Gallery</a>
             </div>
-            <a href="catalog.html" class="btn-catalog">
-                <i class="ri-book-read-fill"></i> Catalog
-            </a>
+
+            <div class="nav-actions">
+                <a href="catalog.html" class="btn-catalog" aria-label="Lihat Katalog Pelatihan">
+                    <i class="ri-book-read-line" aria-hidden="true"></i> Catalog
+                </a>
+                
+               
+                <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -38,47 +85,51 @@
         <div class="container form-page-container">
             
             <div class="back-navigation">
-                <a href="catalog.html" class="btn-back">
-                    <i class="ri-arrow-left-line"></i>
+             
+                <a href="catalog.html" class="btn-back" aria-label="Kembali ke halaman katalog">
+                    <i class="ri-arrow-left-line" aria-hidden="true"></i>
                     <span>Kembali ke Katalog</span>
                 </a>
             </div>
 
             <div class="form-wrapper">
                 <div class="form-header">
-                    <h2 style="color: #F4B700">Hubungi <span class="text-teal">Kami</span></h2>
+                    
+                    <h1 style="color: #F4B700; font-size: clamp(28px, 4vw, 36px); margin-bottom: 15px;">Hubungi <span class="text-teal">Kami</span></h1>
                     <p>Silakan isi formulir di bawah ini. Konsultan kami akan segera merespon pertanyaan Anda melalui WhatsApp.</p>
                 </div>
 
+          
                 <form id="waForm" class="modern-form">
                     <div class="input-group">
                         <label for="nama">Nama Lengkap</label>
-                        <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                        <input type="text" id="nama" placeholder="Masukkan nama Anda" required aria-required="true">
                     </div>
 
                     <div class="input-group">
                         <label for="instansi">Instansi / Perusahaan</label>
-                        <input type="text" id="instansi" placeholder="Masukkan nama instansi/perusahaan" required>
+                        <input type="text" id="instansi" placeholder="Masukkan nama instansi/perusahaan" required aria-required="true">
                     </div>
 
                     <div class="input-row">
                         <div class="input-group">
                             <label for="nohp">Nomor HP / WhatsApp</label>
-                            <input type="tel" id="nohp" placeholder="Contoh: 08123456789" required>
+                           
+                            <input type="tel" id="nohp" placeholder="Contoh: 08123456789" required aria-required="true">
                         </div>
                         <div class="input-group">
                             <label for="email">Alamat Email</label>
-                            <input type="email" id="email" placeholder="email@perusahaan.com" required>
+                            <input type="email" id="email" placeholder="email@perusahaan.com" required aria-required="true">
                         </div>
                     </div>
 
                     <div class="input-group">
                         <label for="pertanyaan">Pertanyaan / Pesan</label>
-                        <textarea id="pertanyaan" rows="5" placeholder="Tuliskan pertanyaan atau kebutuhan training Anda di sini..." required></textarea>
+                        <textarea id="pertanyaan" rows="5" placeholder="Tuliskan pertanyaan atau kebutuhan training Anda di sini..." required aria-required="true"></textarea>
                     </div>
 
-                    <button type="button" id="btnSubmit" class="btn-submit" disabled>
-                        <i class="ri-whatsapp-line"></i> Kirim ke WhatsApp
+                    <button type="button" id="btnSubmit" class="btn-submit" disabled aria-label="Kirim pesan ke WhatsApp">
+                        <i class="ri-whatsapp-line" aria-hidden="true"></i> Kirim ke WhatsApp
                     </button>
                 </form>
             </div>
@@ -100,9 +151,9 @@
             <div class="footer-col border-left">
                 <h4>Kontak & Konsultasi</h4>
                 <ul class="footer-contact">
-                    <li>Cilegon, Indonesia</li>
-                    <li><i class="ri-whatsapp-line"></i> 0818 0424 0776</li>
-                   <li><i class="ri-mail-line"></i> aditya.iyax@gmail.com</li>
+                    <li><i class="ri-map-pin-line" aria-hidden="true"></i> Cilegon, Indonesia</li>
+                    <li><i class="ri-whatsapp-line" aria-hidden="true"></i> 0818 0424 0776</li>
+                   <li><i class="ri-mail-line" aria-hidden="true"></i> aditya.iyax@gmail.com</li>
                     <li>Konsultasi via whatsapp</li>
                 </ul>
             </div>
@@ -121,6 +172,9 @@
         </div>
     </footer>
 
-    <script src="js/contact.js"></script>
+    
+    <script src="js/contact.js" defer></script>
+    
+   
 </body>
 </html>

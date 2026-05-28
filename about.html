@@ -3,111 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - AK Learning</title>
     
+    <title>Tentang Kami | AK Learning - Lembaga Pelatihan & Pengembangan SDM</title>
+    <meta name="description" content="Pelajari lebih lanjut tentang AK Learning Development. Berpengalaman 8+ tahun sebagai fasilitator pelatihan Leadership, Human Resources, dan Komunikasi untuk organisasi Anda.">
+    <meta name="keywords" content="tentang ak learning, profil lembaga pelatihan, konsultan sdm, trainer leadership indonesia, pelatihan komunikasi perusahaan">
+    
+    <link rel="canonical" href="https://www.aklearningdevelopment.com/about.html" />
+    <meta property="og:title" content="Tentang AK Learning Development">
+    <meta property="og:description" content="Lembaga pelatihan dan pengembangan SDM terpercaya dengan 1.000+ peserta terlatih.">
+    <meta property="og:image" content="https://www.aklearningdevelopment.com/img/training-session.webp">
+    <meta property="og:url" content="https://www.aklearningdevelopment.com/about.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/approach.css">
     <link rel="stylesheet" href="css/about.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "AK Learning Development",
+        "description": "Jasa pelatihan dan pengembangan sumber daya manusia di bidang Leadership, Human Resources, dan Communication.",
+        "foundingDate": "2016",
+        "url": "https://www.aklearningdevelopment.com",
+        "logo": "https://www.aklearningdevelopment.com/img/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+62-818-0424-0776",
+          "contactType": "customer service",
+          "email": "aditya.iyax@gmail.com",
+          "areaServed": "ID",
+          "availableLanguage": "Indonesian"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
-        </a>
+            <a href="index.html" class="logo" aria-label="Beranda AK Learning">
+                <img src="img/logo.webp" alt="Logo AK Learning" class="logo-img" width="150" height="50">
+            </a>
             
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links" id="navLinks" role="navigation" aria-label="Navigasi Utama">
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
+                <a href="about.html" class="active" aria-current="page">About</a>
                 <a href="approach.html">Approach</a>
                 <a href="what_we_do.html">What We Do</a>
-                <a href="what_we_have_done.html" >What We Have Done</a>
+                <a href="what_we_have_done.html">What We Have Done</a>
                 <a href="download.html">Download</a>
                 <a href="gallery.html">Gallery</a>
             </div>
 
             <div class="nav-actions">
-                <a href="catalog.html" class="btn-catalog">
-                    <i class="ri-book-read-line"></i> Catalog
+                <a href="catalog.html" class="btn-catalog" aria-label="Lihat Katalog Program">
+                    <i class="ri-book-read-line" aria-hidden="true"></i> Catalog
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="ri-menu-line"></i>
+                <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu" aria-expanded="false">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
                 </button>
             </div>
-
         </div>
     </nav>
 
-    <section class="about-hero">
-        <div class="container about-flex">
-            <div class="about-text reveal">
-                <h1 class="text-yellow">AK LEARNING <br> DEVELOPMENT</h1>
-                <p>
-                    AK Learning Development merupakan industri yang bergerak dalam jasa pelatihan dan pengembangan sumber daya manusia. Dengan layanan pelatihan di bidang Leadership, Human Resources, dan Communication, kami menghadirkan program yang praktis, interaktif, untuk membantu menciptakan perubahan positif dalam organisasi.
-                </p>
-                <a href="catalog.html" class="btn-outline-teal">Programs <i class="ri-arrow-right-line"></i></a>
+    <main>
+        <section class="about-hero">
+            <div class="container about-flex">
+                <div class="about-text reveal">
+                    <h1 class="text-yellow">AK LEARNING <br> DEVELOPMENT</h1>
+                    <h2 class="sr-only" style="display:none;">Profil Lembaga Pelatihan & Pengembangan SDM</h2>
+                    <p>
+                        AK Learning Development merupakan industri yang bergerak dalam jasa pelatihan dan pengembangan sumber daya manusia. Dengan layanan pelatihan di bidang <strong>Leadership, Human Resources, dan Communication</strong>, kami menghadirkan program yang praktis, interaktif, untuk membantu menciptakan perubahan positif dalam organisasi.
+                    </p>
+                    <a href="catalog.html" class="btn-outline-teal">Programs <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number text-yellow">8+</span>
+                            <p class="stat-desc">Tahun <br> Pengalaman</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number text-teal">1K+</span>
+                            <p class="stat-desc">Peserta <br> Training Terlatih</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-images reveal delay-1">
+                    <div class="img-wrapper main-img">
+                        <img src="img/training-session.webp" alt="Sesi Pelatihan Leadership AK Learning" fetchpriority="high" width="600" height="400">
+                    </div>
+                    <div class="img-wrapper sub-img">
+                        <img src="img/speaker2.webp" alt="Trainer AK Learning sedang memberikan materi" width="400" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-mission">
+            <div class="container">
+                <h2 class="section-title text-yellow reveal">VISI & MISI KAMI</h2>
                 
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number text-yellow">8+</span>
-                        <p class="stat-desc">Tahun <br> Pengalaman</p>
+                <div class="vm-grid">
+                    <div class="visi-box reveal delay-1">
+                        <h3>VISI <span class="text-yellow">KAMI</span></h3>
+                        <p class="visi-text">Membangun Sumber Daya Manusia Juara di Indonesia</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number text-teal">1000+</span>
-                        <p class="stat-desc">Program <br> Terselesaikan</p>
+
+                    <div class="misi-box reveal delay-2">
+                        <h3>MISI <span class="text-yellow">KAMI</span></h3>
+                        <ul class="misi-list">
+                            <li>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                <p>Menciptakan sistem pembelajaran yang praktis, fun, interaktif pada bidang Leadership, Human Resources, Communication.</p>
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                <p>Mengembangkan individu dan tim organisasi melalui pengumpulan informasi permasalahan, tantangan organisasi, dan peluang perbaikan berkelanjutan.</p>
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                <p>Menjadi fasilitator pelatihan dan pengembangan sumber daya manusia yang terjangkau oleh seluruh kalangan.</p>
+                            </li>
+                            <li>
+                                <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
+                                <p>Memberikan kontribusi terhadap peningkatan dunia pendidikan dan masyarakat.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="about-images reveal delay-1">
-                <div class="img-wrapper main-img">
-                    <img src="img/training-session.webp" alt="Training Session">
-                </div>
-                <div class="img-wrapper sub-img">
-                    <img src="img/speaker2.webp" alt="Speaker">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="vision-mission">
-        <div class="container">
-            <h2 class="section-title text-yellow reveal">VISI & MISI</h2>
-            
-            <div class="vm-grid">
-                <div class="visi-box reveal delay-1">
-                    <h3>VISI <span class="text-yellow">KAMI</span></h3>
-                    <p class="visi-text">Membangun Sumber Daya Manusia Juara di Indonesia</p>
-                </div>
-
-                <div class="misi-box reveal delay-2">
-                    <h3>MISI <span class="text-yellow">KAMI</span></h3>
-                    <ul class="misi-list">
-                        <li>
-                            <i class="ri-checkbox-circle-fill"></i>
-                            <p>Menciptakan sistem pembelajaran yang praktis, fun, interaktif pada bidang Leadership, Human Resources, Communication.</p>
-                        </li>
-                        <li>
-                            <i class="ri-checkbox-circle-fill"></i>
-                            <p>Mengembangkan individu dan tim organisasi melalui pengumpulan informasi permasalahan, tantangan organisasi, dan peluang perbaikan berkelanjutan.</p>
-                        </li>
-                        <li>
-                            <i class="ri-checkbox-circle-fill"></i>
-                            <p>Menjadi fasilitator pelatihan dan pengembangan sumber daya manusia yang terjangkau oleh seluruh kalangan.</p>
-                        </li>
-                        <li>
-                            <i class="ri-checkbox-circle-fill"></i>
-                            <p>Memberikan kontribusi terhadap peningkatan dunia pendidikan dan masyarakat.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-container">
@@ -125,9 +164,9 @@
             <div class="footer-col border-left">
                 <h4>Kontak & Konsultasi</h4>
                 <ul class="footer-contact">
-                    <li><i class="ri-map-pin-line"></i> Cilegon, Indonesia</li>
-                    <li><i class="ri-whatsapp-line"></i> 0818 0424 0776</li>
-                     <li><i class="ri-mail-line"></i> aditya.iyax@gmail.com</li>
+                    <li><i class="ri-map-pin-line" aria-hidden="true"></i> Cilegon, Indonesia</li>
+                    <li><i class="ri-whatsapp-line" aria-hidden="true"></i> 0818 0424 0776</li>
+                     <li><i class="ri-mail-line" aria-hidden="true"></i> aditya.iyax@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-col border-left">
@@ -145,7 +184,7 @@
         </div>
     </footer>
 
-    <script src="js/about.js"></script>
+    <script src="js/about.js" defer></script>
    
 </body>
 </html>

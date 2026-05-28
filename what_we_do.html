@@ -3,77 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AK Learning - What We Do</title>
     
+    <!-- meta tags SEO -->
+    <title>Layanan Kami: In-House Training & Konsultasi HR | AK Learning</title>
+    <meta name="description" content="Tingkatkan performa organisasi Anda dengan layanan AK Learning: In-House Training, Konsultasi Human Resource (HR), dan Program People Development.">
+    <meta name="keywords" content="in-house training, konsultasi hr, konsultan sdm, people development, pelatihan karyawan perusahaan">
+    
+    <!-- canonical & open graph -->
+    <link rel="canonical" href="https://www.aklearningdevelopment.com/what_we_do.html" />
+    <meta property="og:title" content="Layanan Terbaik AK Learning Development">
+    <meta property="og:description" content="Solusi praktis untuk kebutuhan In-House Training, Konsultasi HR, dan People Development di organisasi Anda.">
+    <meta property="og:url" content="https://www.aklearningdevelopment.com/what_we_do.html">
+    <meta property="og:type" content="website">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/what_we_do.css">
+
+    <!-- schema markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Layanan AK Learning Development",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "position": 1,
+            "name": "In-House Training",
+            "description": "Layanan training yang didatangkan langsung ke organisasi dengan materi yang disesuaikan dengan kebutuhan tim."
+          },
+          {
+            "@type": "Service",
+            "position": 2,
+            "name": "Human Resource Consultation",
+            "description": "Konsultasi HR untuk recruitment & selection, performance management, training & development, serta organization culture."
+          },
+          {
+            "@type": "Service",
+            "position": 3,
+            "name": "People Development",
+            "description": "Perancangan program praktis untuk peningkatan kompetensi individu dengan pencapaian target SMART."
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
-        </a>
+            <a href="index.html" class="logo" aria-label="Beranda AK Learning">
+                
+                <img src="img/logo.webp" alt="Logo AK Learning" class="logo-img" width="150" height="50">
+            </a>
             
-             <div class="nav-links" id="navLinks">
+             <div class="nav-links" id="navLinks" role="navigation" aria-label="Navigasi Utama">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="approach.html">Approach</a>
-                <a href="what_we_do.html"  class="active">What We Do</a>
-                <a href="what_we_have_done.html" >What We Have Done</a>
+                <a href="what_we_do.html" class="active" aria-current="page">What We Do</a>
+                <a href="what_we_have_done.html">What We Have Done</a>
                 <a href="download.html">Download</a>
                 <a href="gallery.html">Gallery</a>
             </div>
 
             <div class="nav-actions">
-                <a href="catalog.html" class="btn-catalog">
-                    <i class="ri-book-read-line"></i> Catalog
+                <a href="catalog.html" class="btn-catalog" aria-label="Lihat Katalog Pelatihan">
+                    <i class="ri-book-read-line" aria-hidden="true"></i> Catalog
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="ri-menu-line"></i>
+                <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <section class="wwd-section">
-        <div class="container">
-            <h1 class="main-title reveal">WHAT WE DO</h1>
-            
-            <div class="wwd-grid">
-                <div class="wwd-left">
-                    <div class="wwd-item reveal delay-1">
-                        <div class="title-wrapper">
-                            <img src="img/pattern-icon-Photoroom.webp" alt="icon" class="title-icon">
-                            <h2><span class="text-yellow">IN-</span><span class="text-teal">HOUSE</span> <span class="text-purple">TRAINING</span></h2>
+    
+    <main>
+        <section class="wwd-section">
+            <div class="container">
+                <h1 class="main-title reveal">WHAT WE DO</h1>
+                
+                <div class="wwd-grid">
+                    <div class="wwd-left">
+                        <div class="wwd-item reveal delay-1">
+                            <div class="title-wrapper">
+                               
+                                <img src="img/pattern-icon-Photoroom.webp" alt="Ikon In-House Training" class="title-icon" width="50" height="50" fetchpriority="high">
+                                <h2><span class="text-yellow">IN-</span><span class="text-teal">HOUSE</span> <span class="text-purple">TRAINING</span></h2>
+                            </div>
+                            <p>Tidak perlu harus jauh-jauh pergi training, Anda dan tim cukup duduk manis di organisasi Anda. Materi yang kami bawakan dapat disesuaikan dengan kebutuhan organisasi Anda. Pengalaman yang berbeda akan Anda dapatkan pada layanan in-house training kami.</p>
                         </div>
-                        <p>Tidak perlu harus jauh-jauh pergi training, anda dan tim cukup duduk manis di organisasi anda. Materi yang kami bawakan dapat disesuaikan dengan kebutuhan organisasi anda. Pengalaman yang berbeda akan anda dapatkan pada layanan in-house training kami.</p>
+
+                        <div class="wwd-item reveal delay-2">
+                            <div class="title-wrapper">
+                                <img src="img/pattern-icon-Photoroom.webp" alt="Ikon Konsultasi HR" class="title-icon" width="50" height="50" loading="lazy">
+                                <h2><span class="text-yellow">HUMAN</span> <span class="text-teal">RESOURCE</span> <span class="text-purple">CONSULTATION</span></h2>
+                            </div>
+                            <p>Organisasi Anda masih sering salah rekrut karyawan, tingkat turn over tinggi, atau tim kurang produktif? Kami siap membantu memecahkan masalah organisasi Anda pada berbagai bidang HR. Seperti recruitment & selection, perfomance management, personnel & remuneration, training & development, retention & engagement, organization culture, dan bidang lain yang sesuai dengan kebutuhan organisasi Anda.</p>
+                        </div>
                     </div>
 
-                    <div class="wwd-item reveal delay-2">
-                        <div class="title-wrapper">
-                            <img src="img/pattern-icon-Photoroom.webp" alt="icon" class="title-icon">
-                            <h2><span class="text-yellow">HUMAN</span> <span class="text-teal">RESOURCE</span> <span class="text-purple">CONSULTATION</span></h2>
+                    <div class="wwd-right">
+                        <div class="wwd-item reveal delay-3">
+                            <div class="title-wrapper">
+                                <img src="img/pattern-icon-Photoroom.webp" alt="Ikon People Development" class="title-icon" width="50" height="50" loading="lazy">
+                                <h2><span class="text-yellow">PEOPLE</span> <span class="text-teal">DEVELOPMENT</span></h2>
+                            </div>
+                            <p>Tidak ada lagi individu yang stagnan dalam karirnya. Perlu adanya peningkatan kompetensi sampai dengan pengukuran perfoma terhadap target yang akan dicapai. Tentunya dengan ketercapaian target individu, target organisasi akan lebih mudah tercapai. Kami merancang program yang praktis untuk peningkatan individu di organisasi Anda dengan target yang SMART untuk membantu mencapai GOALS dari organisasi.</p>
                         </div>
-                        <p>Organisasi anda masih sering salah rekrut karyawan, tingkat turn over tinggi, atau tim kurang produktif? Kami siap membantu memecahkan masalah organisasi anda pada berbagai bidang HR. Seperti recruitment & selection, perfomance management, personnel & remuneration, training & development, retention & engagement, organization culture, dan bidang lain yang sesuai dengan kebutuhan organisasi anda.</p>
-                    </div>
-                </div>
-
-                <div class="wwd-right">
-                    <div class="wwd-item reveal delay-3">
-                        <div class="title-wrapper">
-                            <img src="img/pattern-icon-Photoroom.webp" alt="icon" class="title-icon">
-                            <h2><span class="text-yellow">PEOPLE</span> <span class="text-teal">DEVELOPMENT</span></h2>
-                        </div>
-                        <p>Tidak ada lagi individu yang stagnan dalam karir nya. Perlu adanya peningkatan kompetensi sampai dengan pengukuran perfoma terhadap target yang akan dicapai. Tentunya dengan ketercapaian target individu, target organisasi akan lebih mudah tercapai. Kami merancang program yang praktis untuk peningkatan individu di organisasi anda dengan target yang SMART untuk membantu mencapai GOALS dari organisasi.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container footer-container">
@@ -84,6 +137,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="approach.html">Approach</a></li>
                     <li><a href="what_we_do.html">What We Do</a></li>
+                    <li><a href="what_we_have_done.html">What We Have Done</a></li>
                     <li><a href="catalog.html">Catalog</a></li>
                 </ul>
             </div>
@@ -91,9 +145,9 @@
             <div class="footer-col border-left">
                 <h4>Kontak & Konsultasi</h4>
                 <ul class="footer-contact">
-                    <li>Cilegon, Indonesia</li>
-                    <li><i class="ri-whatsapp-line"></i> 0818 0424 0776</li>
-                    <li><i class="ri-mail-line"></i> aditya.iyax@gmail.com</li>
+                    <li><i class="ri-map-pin-line" aria-hidden="true"></i> Cilegon, Indonesia</li>
+                    <li><i class="ri-whatsapp-line" aria-hidden="true"></i> 0818 0424 0776</li>
+                    <li><i class="ri-mail-line" aria-hidden="true"></i> aditya.iyax@gmail.com</li>
                     <li>Konsultasi via whatsapp</li>
                 </ul>
             </div>
@@ -114,39 +168,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Animasi Scroll
-            const reveals = document.querySelectorAll(".reveal");
-            const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-
-            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, revealOptions);
-
-            reveals.forEach(reveal => revealOnScroll.observe(reveal));
-
-            // Menu Hamburger
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            
-            if(menuToggle && navLinks) {
-                const icon = menuToggle.querySelector('i');
-                menuToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    if (navLinks.classList.contains('active')) {
-                        icon.classList.replace('ri-menu-line', 'ri-close-line');
-                    } else {
-                        icon.classList.replace('ri-close-line', 'ri-menu-line');
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="js/what_we_do.js" defer></script>
+    
 </body>
 </html>

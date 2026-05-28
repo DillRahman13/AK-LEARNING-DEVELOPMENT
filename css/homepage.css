@@ -1,30 +1,50 @@
+/* ==========================================================================
+   1. ROOT VARIABLES & TOKENS
+   ========================================================================== */
 :root {
+    /* Color Palette */
     --primary: #059A87; 
     --secondary: #F4B700; 
     --purple-dark: #2B185A; 
     --text-dark: #1A1A1A;
     --white: #ffffff;
+    
+    /* Typography */
     --font-poppins: 'Poppins', sans-serif;
     
+    /* Animation Timing Functions */
     --bezier: cubic-bezier(0.25, 1, 0.5, 1);
     --smooth-bezier: cubic-bezier(0.65, 0, 0.35, 1); 
 }
 
-* {
+/* ==========================================================================
+   2. RESET & BASE
+   ========================================================================== */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-poppins);
     background-color: var(--primary);
+    color: var(--text-dark);
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
+    /* Optimasi rendering text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* ==========================================================================
+   3. NAVIGATION BAR (HEADER)
+   ========================================================================== */
 .navbar {
     background-color: var(--white);
     padding: 20px 0;
@@ -33,7 +53,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); 
-    transition: all 0.4s var(--smooth-bezier);
+    transition: padding 0.4s var(--smooth-bezier);
 }
 
 .nav-container {
@@ -45,11 +65,11 @@ body {
     align-items: center;
 }
 
+/* Logo */
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -57,12 +77,8 @@ body {
     width: auto;
     display: block;
 }
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
+/* Nav Links */
 .nav-links {
     display: flex;
     gap: 32px;
@@ -78,6 +94,7 @@ body {
     transition: color 0.3s var(--smooth-bezier);
 }
 
+/* Hover Effect & Focus Accessibility */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -90,10 +107,36 @@ body {
 }
 
 .nav-links a:hover::after, 
+.nav-links a:focus-visible::after,
 .nav-links a.active::after {
     width: 100%;
 }
 
+.nav-links a:focus-visible {
+    outline: 2px dashed var(--secondary);
+    outline-offset: 4px;
+}
+
+/* Nav Actions & Mobile Menu Button */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   4. BUTTONS
+   ========================================================================== */
 .btn-catalog {
     background-color: var(--primary);
     color: var(--white);
@@ -108,27 +151,65 @@ body {
     transition: all 0.4s var(--smooth-bezier);
 }
 
-.btn-catalog:hover {
+.btn-catalog:hover,
+.btn-catalog:focus-visible {
     background-color: transparent;
     color: var(--primary);
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 10px 20px rgba(5, 154, 135, 0.15);
+    outline: none;
 }
 
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--primary);
-    font-size: 28px;
+.btn-primary {
+    position: relative;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 16px 42px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid var(--secondary);
+    overflow: hidden; 
+    transition: all 0.4s var(--smooth-bezier);
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 150%;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: transparent; 
+    color: var(--white);
+    border-color: var(--white);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    outline: none;
 }
 
+/* ==========================================================================
+   5. HERO SECTION
+   ========================================================================== */
 .hero {
     height: calc(100vh - 82px);
     background-color: var(--primary);
-    background-image: url('latar.webp'); 
+    background-image: url('latar.webp'); /* Pastikan path disesuaikan jika CSS ada di folder css/ */
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: contain;
@@ -151,14 +232,32 @@ body {
     color: var(--white);
     margin-right: 5%; 
     opacity: 0;
+    /* Hardware Acceleration hint untuk animasi lancar 60fps */
+    will-change: transform, opacity;
     animation: smoothReveal 1.2s var(--smooth-bezier) forwards;
 }
 
+/* Mengganti styling H1 lama */
 .hero-content h1 {
-    font-size: clamp(38px, 5vw, 64px);
-    font-weight: 700;
     margin-bottom: 24px;
     line-height: 1.1;
+}
+
+/* Styling khusus nama brand */
+.brand-name {
+    display: block;
+    font-size: clamp(32px, 4vw, 52px); /* Ukuran disesuaikan agar tidak mudah patah */
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Styling khusus tagline SEO */
+.seo-tagline {
+    display: block;
+    font-size: clamp(10px, 2.5vw, 24px);
+    font-weight: 500;
+    color: #fff; /* Diberi aksen warna kuning agar lebih hidup dan membedakan hierarki */
+    margin-top: 5px;
 }
 
 .hero-content p {
@@ -169,45 +268,9 @@ body {
     opacity: 0.95;
 }
 
-.btn-primary {
-    position: relative;
-    background-color: var(--secondary);
-    color: var(--white);
-    padding: 16px 42px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    border: 2px solid var(--secondary);
-    overflow: hidden; 
-    transition: all 0.4s var(--smooth-bezier);
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transform: skewX(-25deg);
-    transition: left 0.6s ease;
-}
-
-.btn-primary:hover::before {
-    left: 150%;
-}
-
-.btn-primary:hover {
-    background-color: transparent; 
-    color: var(--white);
-    border-color: var(--white);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
+/* ==========================================================================
+   6. ANIMATIONS
+   ========================================================================== */
 @keyframes smoothReveal {
     0% {
         opacity: 0;
@@ -219,9 +282,13 @@ body {
     }
 }
 
-/* --- Area Responsif --- */
+/* ==========================================================================
+   7. MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
 @media (max-width: 992px) {
-    .hero-content { width: 60%; }
+    .hero-content { 
+        width: 60%; 
+    }
 }
 
 @media (max-width: 768px) {
@@ -243,6 +310,8 @@ body {
         transform: translateY(-150%);
         opacity: 0;
         z-index: -1;
+        /* Hardware Acceleration untuk menu mobile */
+        will-change: transform, opacity;
         transition: all 0.4s var(--smooth-bezier);
     }
 
@@ -257,20 +326,20 @@ body {
     }
 
     .hero {
-        /* Menghilangkan gambar latar di versi mobile */
         background-image: none;
-        /* Memastikan warna dasar hijau tetap tampil */
         background-color: var(--primary);
     }
     
-    .hero-container { justify-content: center; }
+    .hero-container { 
+        justify-content: center; 
+    }
     
     .hero-content {
         width: 100%;
         text-align: center;
-       
         background: rgba(2, 79, 69, 0.95); 
         padding: 40px 25px;
         border-radius: 24px;
+        margin-right: 0; /* Reset margin untuk mobile */
     }
 }
