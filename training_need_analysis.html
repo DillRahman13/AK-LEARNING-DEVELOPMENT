@@ -3,62 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Need Analysis - AK Learning</title>
     
+    <title>Training Need Analysis - AK Learning Development</title>
+    <meta name="description" content="Pelatihan Training Need Analysis dari AK Learning. Kupas tuntas metode analisa kebutuhan pelatihan yang disesuaikan dengan visi dan budaya organisasi Anda.">
+    <meta name="keywords" content="pelatihan training need analysis, TNA, analisa kebutuhan pelatihan, HR training, AK Learning">
+    <meta name="author" content="AK Learning Development">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Training Need Analysis - AK Learning Development">
+    <meta property="og:description" content="Pelatihan Training Need Analysis dari AK Learning. Kupas tuntas metode analisa kebutuhan pelatihan.">
+    <meta property="og:image" content="img/logo.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/approach.css">
     <link rel="stylesheet" href="css/detail_catalog.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Training Need Analysis",
+      "description": "Pelatihan tentang metode dan cara melakukan analisa kebutuhan pelatihan yang disesuaikan dengan kebutuhan, visi, dan budaya organisasi.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AK Learning Development",
+        "sameAs": "https://www.aklearningdevelopment.com"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "offline",
+        "courseWorkload": "PT16H"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "6000000",
+        "priceCurrency": "IDR",
+        "category": "Human Resources Training",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
 </head>
 <body>
 
-    <nav class="navbar">
+   
+
+    <nav class="navbar" aria-label="Navigasi Utama">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-            <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
-        </a>
+            <a href="index.html" class="logo" aria-label="Beranda AK Learning">
+                <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img" width="150" height="50">
+            </a>
             
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
-                <a href="about.html" >About</a>
+                <a href="about.html">About</a>
                 <a href="approach.html">Approach</a>
                 <a href="what_we_do.html">What We Do</a>
-                <a href="what_we_have_done.html" >What We Have Done</a>
+                <a href="what_we_have_done.html">What We Have Done</a>
                 <a href="download.html">Download</a>
                 <a href="gallery.html">Gallery</a>
             </div>
 
             <div class="nav-actions">
-                <a href="catalog.html" class="btn-catalog">
-                    <i class="ri-book-read-line"></i> Catalog
+                <a href="catalog.html" class="btn-catalog" aria-label="Lihat Katalog Pelatihan">
+                    <i class="ri-book-read-line" aria-hidden="true"></i> Catalog
                 </a>
-                
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="ri-menu-line"></i>
+                <button class="menu-toggle" id="menuToggle" aria-label="Buka Menu Mobile">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <main class="detail-container">
-        <div class="back-navigation reveal">
+    <main id="main-content" class="detail-container">
+        
+        <nav aria-label="Breadcrumb" class="back-navigation reveal">
             <a href="catalog.html" class="btn-back">
-                <i class="ri-arrow-left-line"></i>
+                <i class="ri-arrow-left-line" aria-hidden="true"></i>
                 <span>Kembali ke Katalog</span>
             </a>
-        </div>
-        
+        </nav>
+
         <h1 class="program-title reveal delay-1">TRAINING NEED <span class="text-yellow">ANALYSIS</span></h1>
 
-        <section class="overview-section">
+        <section class="overview-section" aria-labelledby="overview-title">
             <div class="overview-text reveal delay-2">
-                <h3 class="section-subtitle">Gambaran Singkat</h3>
-                <p>Dalam mengembangkan sumber daya manusia, setiap organisasi memiliki pola tersendiri untuk menentukan jenis training yang akan dijalankan. Namun tidak sedikit jenis training tersebut kurang sesuai dengan harapan yang diinginkan. Akibatnya, inventasi yang telah dikeluarkan maupun efektivitas training tidak berjalan secara maksimal.</p>
+                <h2 id="overview-title" class="section-subtitle">Gambaran Singkat</h2>
+                <p>Dalam mengembangkan sumber daya manusia, setiap organisasi memiliki pola tersendiri untuk menentukan jenis training yang akan dijalankan. Namun tidak sedikit jenis training tersebut kurang sesuai dengan harapan yang diinginkan. Akibatnya, investasi yang telah dikeluarkan maupun efektivitas training tidak berjalan secara maksimal.</p>
                 <p>Training ini akan mengupas tuntas metode dan cara dalam melakukan analisa kebutuhan pelatihan yang tentunya disesuaikan dengan kebutuhan, visi, dan budaya organisasi.</p>
             </div>
+            
             <div class="participants-card reveal delay-3">
-                <h4>Peserta</h4>
+                <h2>Target Peserta</h2>
                 <ul>
                     <li>Staff HR</li>
                     <li>Staff Training</li>
@@ -68,24 +108,24 @@
             </div>
         </section>
 
-        <section class="method-section reveal">
-            <h3 class="method-title">Metode</h3>
+        <section class="method-section reveal" aria-labelledby="method-title">
+            <h2 id="method-title" class="method-title">Metode Pembelajaran</h2>
             <div class="method-grid">
                 <div class="method-item">
                     <div class="img-wrapper">
-                        <img src="img/presentation-vector.webp" alt="Presentasi">
+                        <img src="img/presentation-vector.webp" alt="Metode Presentasi" width="80" height="80" loading="lazy">
                     </div>
                     <p>Presentasi</p>
                 </div>
                 <div class="method-item">
                     <div class="img-wrapper">
-                        <img src="img/Tanya-jawab-Photoroom.webp" alt="Tanya Jawab">
+                        <img src="img/Tanya-jawab-Photoroom.webp" alt="Metode Tanya Jawab" width="80" height="80" loading="lazy">
                     </div>
                     <p>Tanya Jawab</p>
                 </div>
                 <div class="method-item">
                     <div class="img-wrapper">
-                        <img src="img/praktek-Photoroom.webp" alt="Praktek">
+                        <img src="img/praktek-Photoroom.webp" alt="Metode Praktek" width="80" height="80" loading="lazy">
                     </div>
                     <p>Praktek</p>
                 </div>
@@ -93,8 +133,8 @@
         </section>
 
         <div class="info-grid">
-            <div class="materi-box reveal delay-1">
-                <h3>Materi</h3>
+            <section class="materi-box reveal delay-1" aria-labelledby="material-title">
+                <h2 id="material-title">Materi Kurikulum</h2>
                 <ul>
                     <li>Analisa kebutuhan organisasi</li>
                     <li>Kompetensi jabatan</li>
@@ -103,40 +143,41 @@
                     <li>Model evaluasi training</li>
                     <li>Analisa efektivitas training</li>
                 </ul>
-            </div>
+            </section>
             
-            <div class="info-sidebar">
+            <aside class="info-sidebar">
                 <div class="package-box reveal delay-2">
-                    <h3>Paket In-House</h3>
+                    <h2>Paket In-House</h2>
                     <div class="package-detail">
-                        <p>Min : 10 Orang</p>
-                        <p>Max : 20 Orang</p>
+                        <p><strong>Min:</strong> 10 Orang</p>
+                        <p><strong>Max:</strong> 20 Orang</p>
                     </div>
                 </div>
 
-                <div class="investment-bar reveal delay-3">
-                    Investasi : Rp. 6.000.000,00
+                <div class="investment-bar reveal delay-3" aria-label="Informasi Investasi">
+                    Investasi: <strong>Rp. 6.000.000,00</strong>
                 </div>
-            </div>
+            </aside>
         </div>
 
-        <div class="registration-container reveal">
-            <a href="form_daftar.html" class="btn-register-now">
+        <section class="registration-container reveal" aria-labelledby="register-title">
+            <h2 id="register-title" class="visually-hidden">Pendaftaran</h2>
+            <a href="form_daftar.html" class="btn-register-now" aria-label="Daftar kelas Training Need Analysis sekarang">
                 <div class="btn-content">
-                    <i class="ri-edit-box-line"></i>
+                    <i class="ri-edit-box-line" aria-hidden="true"></i>
                     <span>Daftar Sekarang</span>
                 </div>
-                <i class="ri-arrow-right-up-line arrow-icon"></i>
+                <i class="ri-arrow-right-up-line arrow-icon" aria-hidden="true"></i>
             </a>
-            <p class="registration-note">*Pendaftaran akan diarahkan ke Form</p>
-        </div> 
+            <p class="registration-note">*Pendaftaran akan diarahkan ke Form Pendaftaran Resmi</p>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <h3>AK LEARNING DEVELOPMENT</h3>
-               <ul class="footer-links">
+                <h2>AK LEARNING DEVELOPMENT</h2>
+                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="approach.html">Approach</a></li>
@@ -145,11 +186,11 @@
                 </ul>
             </div>
             <div class="footer-col border-left">
-                <h4>Kontak & Konsultasi</h4>
+                <h3>Kontak & Konsultasi</h3>
                 <ul class="footer-contact">
-                    <li><i class="ri-map-pin-line"></i> Cilegon, Indonesia</li>
-                    <li><i class="ri-whatsapp-line"></i> 0818 0424 0776</li>
-                    <li><i class="ri-mail-line"></i> Aklearning@gmail.com</li>
+                    <li><i class="ri-map-pin-line" aria-hidden="true"></i> Cilegon, Indonesia</li>
+                    <li><i class="ri-whatsapp-line" aria-hidden="true"></i> 0818 0424 0776</li>
+                    <li><i class="ri-mail-line" aria-hidden="true"></i> Aklearning@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-col border-left">
@@ -166,40 +207,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Animasi Scroll
-            const reveals = document.querySelectorAll(".reveal");
-            const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-
-            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, revealOptions);
-
-            reveals.forEach(reveal => revealOnScroll.observe(reveal));
-
-            // Menu Hamburger
-            const menuToggle = document.getElementById('menuToggle');
-            const navLinks = document.getElementById('navLinks');
-            
-            if(menuToggle && navLinks) {
-                const icon = menuToggle.querySelector('i');
-                menuToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    if (navLinks.classList.contains('active')) {
-                        icon.classList.replace('ri-menu-line', 'ri-close-line');
-                    } else {
-                        icon.classList.replace('ri-close-line', 'ri-menu-line');
-                    }
-                });
-            }
-        });
-    </script>
+    
+    <script src="js/pelatihan.js" defer></script>
 </body>
 </html>
