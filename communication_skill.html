@@ -19,21 +19,22 @@
             <img src="img/logo.webp" alt="AK Learning Logo" class="logo-img">
         </a>
             
-            <div class="nav-links" id="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
-                <a href="index1.html">About</a>
-                <a href="index2.html">Approach</a>
-                <a href="index3.html">What We Do</a>
-                <a href="index4.html">What We Have Done</a>
-                <a href="index6.html">Download</a>
-                 <a href="index7.html">Gallery</a>
+                <a href="about.html" >About</a>
+                <a href="approach.html">Approach</a>
+                <a href="what_we_do.html">What We Do</a>
+                <a href="what_we_have_done.html" >What We Have Done</a>
+                <a href="download.html">Download</a>
+                <a href="gallery.html">Gallery</a>
             </div>
-            
+
             <div class="nav-actions">
-                <a href="index5.html" class="btn-catalog">
+                <a href="catalog.html" class="btn-catalog">
                     <i class="ri-book-read-line"></i> Catalog
                 </a>
-                <button class="menu-toggle" id="menu-toggle">
+                
+                <button class="menu-toggle" id="menuToggle">
                     <i class="ri-menu-line"></i>
                 </button>
             </div>
@@ -42,7 +43,7 @@
 
     <main class="detail-container">
         <div class="back-navigation reveal">
-            <a href="index5.html" class="btn-back">
+            <a href="catalog.html" class="btn-back">
                 <i class="ri-arrow-left-line"></i>
                 <span>Kembali ke Katalog</span>
             </a>
@@ -139,12 +140,12 @@
         <div class="container footer-container reveal">
             <div class="footer-col">
                 <h3>AK LEARNING DEVELOPMENT</h3>
-                <ul class="footer-links">
+                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index1.html">About</a></li>
-                    <li><a href="index2.html">Approach</a></li>
-                    <li><a href="index3.html">What We Do</a></li>
-                    <li><a href="index5.html">Catalog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="approach.html">Approach</a></li>
+                    <li><a href="what_we_do.html">What We Do</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
                 </ul>
             </div>
             <div class="footer-col border-left">
@@ -170,9 +171,10 @@
         </div>
     </footer>
 
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // --- Logika Animasi Scroll ---
+            // --- Animasi Scroll ---
             const reveals = document.querySelectorAll(".reveal");
             const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
 
@@ -187,7 +189,7 @@
 
             reveals.forEach(reveal => revealOnScroll.observe(reveal));
 
-            // --- Logika Hamburger Menu ---
+           // --- Hamburger Menu ---
             const menuToggle = document.getElementById("menu-toggle");
             const navLinks = document.getElementById("nav-links");
             const menuIcon = menuToggle.querySelector("i");

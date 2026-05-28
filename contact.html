@@ -21,14 +21,14 @@
         
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index1.html">About</a>
-                <a href="index2.html">Approach</a>
-                <a href="index3.html">What We Do</a>
-                <a href="index4.html">What We Have Done</a>
-                <a href="index6.html">Download</a>
+                <a href="about.html">About</a>
+                <a href="approach.html">Approach</a>
+                <a href="what_we_do.html">What We Do</a>
+                <a href="what_we_have_done.html">What We Have Done</a>
+                <a href="download.html">Download</a>
 
             </div>
-            <a href="index5.html" class="btn-catalog">
+            <a href="catalog.html" class="btn-catalog">
                 <i class="ri-book-read-fill"></i> Catalog
             </a>
         </div>
@@ -38,7 +38,7 @@
         <div class="container form-page-container">
             
             <div class="back-navigation">
-                <a href="index5.html" class="btn-back">
+                <a href="catalog.html" class="btn-back">
                     <i class="ri-arrow-left-line"></i>
                     <span>Kembali ke Katalog</span>
                 </a>
@@ -89,12 +89,12 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <h3>AK LEARNING DEVELOPMENT</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">What We Do</a></li>
-                    <li><a href="#">Catalog</a></li>
+                 <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="approach.html">Approach</a></li>
+                    <li><a href="what_we_do.html">What We Do</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
                 </ul>
             </div>
             <div class="footer-col border-left">
@@ -121,45 +121,6 @@
         </div>
     </footer>
 
-    <script>
-        const formInputs = document.querySelectorAll('#waForm input, #waForm textarea');
-        const btnSubmit = document.getElementById('btnSubmit');
-
-        // Fungsi Validasi: Cek apakah semua field terisi
-        function checkFormValidity() {
-            let isValid = true;
-            formInputs.forEach(input => {
-                if (input.value.trim() === '') {
-                    isValid = false;
-                }
-            });
-            // Aktifkan tombol jika valid, nonaktifkan jika tidak
-            btnSubmit.disabled = !isValid;
-        }
-
-        // Pantau setiap ketikan user di form
-        formInputs.forEach(input => {
-            input.addEventListener('input', checkFormValidity);
-        });
-
-        // Logika Pengiriman ke WhatsApp
-        btnSubmit.addEventListener('click', function() {
-            const nama = document.getElementById('nama').value;
-            const instansi = document.getElementById('instansi').value;
-            const nohp = document.getElementById('nohp').value;
-            const email = document.getElementById('email').value;
-            const pertanyaan = document.getElementById('pertanyaan').value;
-
-            // Format Pesan
-            const pesan = `Halo Konsultan AK Learning, saya ingin bertanya terkait program training.%0A%0A*Data Diri:*%0ANama: ${nama}%0AInstansi/Perusahaan: ${instansi}%0ANo. HP: ${nohp}%0AEmail: ${email}%0A%0A*Pertanyaan:*%0A${pertanyaan}`;
-
-            // Nomor WA Tujuan (Format International 62 tanpa +)
-            const nomorWA = "6281804240776";
-            
-            // Generate Link dan Buka Tab Baru
-            const waLink = `https://wa.me/${nomorWA}?text=${pesan}`;
-            window.open(waLink, '_blank');
-        });
-    </script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
