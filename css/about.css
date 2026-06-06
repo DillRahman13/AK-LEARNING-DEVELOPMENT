@@ -1,14 +1,12 @@
-/* =========================================
-   PENGATURAN NAVBAR & HAMBURGER MENU
-   ========================================= */
+
 .nav-actions {
     display: flex;
-    flex-direction: row; /* Memaksa elemen berjejer ke samping */
-    align-items: center; /* Memastikan keduanya rata tengah secara vertikal */
-    gap: 15px; /* Jarak antara tombol Catalog dan Hamburger */
+    flex-direction: row; 
+    align-items: center; 
+    gap: 15px; 
 }
 
-/* Sembunyikan tombol hamburger di layar PC */
+
 .menu-toggle {
     display: none;
     background: transparent;
@@ -21,9 +19,7 @@
     transition: transform 0.3s ease;
 }
 
-/* =========================================
-   ANIMASI & HERO SECTION
-   ========================================= */
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -185,9 +181,7 @@
     transition: transform 0.5s ease;
 }
 
-/* =========================================
-   VISI & MISI SECTION
-   ========================================= */
+
 .vision-mission {
     padding: 100px 0;
     background-color: #fcfcfc;
@@ -272,10 +266,6 @@
 .text-yellow { color: var(--secondary) !important; }
 .text-teal { color: var(--primary) !important; }
 
-/* =========================================
-   RESPONSIVE DESIGN (TABLET & MOBILE)
-   ========================================= */
-
 /* --- Tablet --- */
 @media (max-width: 992px) {
     .about-flex, .vm-grid {
@@ -298,11 +288,10 @@
         transform: none; 
     }
 }
-
-/* --- Pengaturan Khusus Mobile (HP) --- */
+/* Mobile */
 @media (max-width: 768px) {
     
-    /* Navbar Mobile (Hamburger & Nav Dropdown) */
+    
     .menu-toggle {
         display: flex;
         align-items: center;
@@ -326,7 +315,7 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #ffffff; /* Bisa diganti var(--white) jika ada */
+        background-color: #ffffff; 
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
@@ -345,7 +334,7 @@
         z-index: 999;
     }
 
-    /* Hero Section Mobile */
+    
     .about-hero {
         padding: 50px 0;
     }
@@ -359,7 +348,7 @@
         text-align: center;
     }
 
-    /* Posisikan tombol di tengah */
+    
     .btn-outline-teal {
         display: flex;
         justify-content: center;
@@ -367,34 +356,34 @@
         margin: 0 auto;
     }
 
-    /* Angka stat berjejer rapi atau turun ke bawah */
+    
     .stats-container {
         justify-content: center;
         gap: 30px;
         text-align: center;
     }
 
-    /* Bikin gambar sejajar ke bawah (Stacked) */
+    
     .about-images {
         display: flex;
-        flex-direction: column; /* Mengubah arah menjadi ke bawah */
+        flex-direction: column; 
         align-items: center;
-        gap: 20px; /* Jarak antar gambar */
+        gap: 20px; 
         margin-top: 40px;
     }
 
     .main-img, .sub-img {
-        width: 100%; /* Lebar penuh */
-        position: relative; /* Menghilangkan posisi menumpuk absolute */
+        width: 100%; 
+        position: relative; 
         top: 0;
         left: 0;
     }
 
     .sub-img {
-        border: none; /* Hilangkan garis putih agar lebih rapi saat dijejer ke bawah */
+        border: none; 
     }
 
-    /* Visi Misi Mobile */
+    
     .vision-mission {
         padding: 60px 0;
     }
@@ -413,6 +402,6 @@
     }
     
     .misi-list p {
-        text-align: left; /* Teks misi tetap rata kiri agar mudah dibaca */
+        text-align: left; 
     }
 }

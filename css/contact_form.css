@@ -1,7 +1,3 @@
-/* =========================================
-   CONTACT FORM - COMPETITIVE 2026 DESIGN
-   ========================================= */
-
 .form-section {
     padding: 60px 0 100px 0;
     background-color: #fcfcfc; /* Warna background abu sangat terang */
@@ -11,7 +7,6 @@
     max-width: 900px !important;
 }
 
-/* Back Button */
 .back-navigation {
     margin-bottom: 30px;
     display: flex;
@@ -39,7 +34,6 @@
     box-shadow: 0 10px 20px rgba(5, 154, 135, 0.15);
 }
 
-/* Form Wrapper */
 .form-wrapper {
     background: var(--white);
     padding: 50px 60px;
@@ -71,7 +65,6 @@
     display: block;
 }
 
-/* Input Group Styling */
 .modern-form {
     display: flex;
     flex-direction: column;
@@ -111,7 +104,6 @@
     transition: all 0.3s ease;
 }
 
-/* Focus State */
 .input-group input:focus,
 .input-group textarea:focus {
     background-color: var(--white);
@@ -124,7 +116,6 @@
     min-height: 120px;
 }
 
-/* Submit Button 2026 */
 .btn-submit {
     margin-top: 10px;
     padding: 18px 30px;
@@ -147,23 +138,20 @@
     font-size: 22px;
 }
 
-/* Hover State saat aktif */
 .btn-submit:not(:disabled):hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 30px rgba(5, 154, 135, 0.3);
     background: #048272;
 }
 
-/* Disabled State (Saat form kosong) */
 .btn-submit:disabled {
-    background: #d1d5db; /* Warna abu-abu mati */
+    background: #d1d5db; 
     color: #9ca3af;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
-/* Responsive Form */
 @media (max-width: 768px) {
     .form-wrapper {
         padding: 30px 20px;

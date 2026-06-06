@@ -1,4 +1,3 @@
-/* Pengaturan Global Detail */
 .detail-container {
     max-width: 1200px;
     margin: 60px auto;
@@ -7,7 +6,6 @@
     
 }
 
-/* Animasi Scroll Global */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -23,7 +21,6 @@
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
-/* Judul Utama */
 .program-title {
     font-size: 42px;
     font-weight: 700;
@@ -33,7 +30,6 @@
 
 .text-yellow { color: var(--secondary); }
 
-/* Tombol Kembali */
 .back-navigation {
     margin-bottom: 30px;
     display: flex;
@@ -75,7 +71,6 @@
     transform: scale(0.95);
 }
 
-/* Area Overview (Kiri Teks, Kanan Kotak) */
 .overview-section {
     display: flex;
     justify-content: space-between;
@@ -106,7 +101,6 @@
     display: block;
 }
 
-/* Kotak Peserta */
 .participants-card {
     background-color: var(--primary);
     color: white;
@@ -138,7 +132,6 @@
     font-size: 24px;
 }
 
-/* Area Metode Pembelajaran */
 .method-section {
     text-align: center;
     margin-bottom: 80px;
@@ -192,7 +185,6 @@
     color: #333;
 }
 
-/* Area Materi & Harga */
 .info-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -233,13 +225,12 @@
     left: 0;
 }
 
-/* Kotak Paket & Investasi */
 .package-box {
     background-color: var(--secondary);
     color: white;
     padding: 40px;
     border-radius: 15px;
-    flex-grow: 1; /* Biar sejajar tingginya */
+    flex-grow: 1; 
 }
 
 .package-detail p {
@@ -259,7 +250,6 @@
     box-shadow: 0 10px 20px rgba(45, 49, 146, 0.2);
 }
 
-/* Tombol Daftar Outline Kuning */
 .registration-container {
     margin-top: 40px;
     display: flex;
@@ -299,7 +289,6 @@
     z-index: 2;
 }
 
-/* Efek Background Isi pas Di-hover */
 .btn-register-now::before {
     content: '';
     position: absolute;
@@ -327,7 +316,6 @@
     margin-left: 5px;
 }
 
-/* Responsif HP & Tablet */
 @media (max-width: 992px) {
     .overview-section, .info-grid {
         flex-direction: column;
